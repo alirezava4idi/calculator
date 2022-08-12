@@ -1,0 +1,80 @@
+:root {
+    --a : #CFD8E4;
+    --b : #B0936E;
+    --c : #31698F;
+    --d : #911725;
+    --e : #CF985D;
+}
+* {
+    box-sizing: border-box;
+  font-family: Robto, Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c)
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    aspect-ratio: 1;
+}
+.display {
+    grid-column: 1 / -1;
+    background-color: var(--a);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 100px;
+    
+}
+
+.prev-oprand {
+    color: rgb(37, 36, 36);
+    font-size: 1.5rem;
+}
+.curr-oprand {
+    color: black;
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--d);
+    
+}
+.row {
+    display: flex;
+
+}
+
+.row > div {
+    padding: 0.5rem;
+    width: 45px;
+    aspect-ratio: 1;
+    display: flex;
+    cursor: pointer;
+    color: var(--a);
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+} 
+
+.row > div:hover {
+    background-color: var(--b);
+}
